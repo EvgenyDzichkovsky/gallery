@@ -1,0 +1,99 @@
+.hero{
+
+  &__focus-image{
+    z-index: 2;
+    padding-top: 35px;
+    margin-left: -45px;
+
+    @include tablet{
+      padding-top: 0;
+      z-index: -1;
+      margin-top: -60px;
+      padding-left: 35px;
+    }
+
+    @include mobile{
+      margin-left: 0;
+    }
+  }
+
+  &__wrap-content{
+    padding-top: 112px;
+    padding-left: 83px;
+
+    @include tablet{
+      padding-top: 60px;
+    }
+
+    @include mobile{
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+  h1{
+    font-size: 60px;
+    padding-bottom: 30px;
+
+    @include tablet{
+      font-weight: 500;
+      line-height: 60px;
+    }
+
+    @include mobile{
+      font-size: 36px;
+      color: #ffffff;
+      line-height: 36px;
+      font-weight: 500;
+      padding-top: 30px;
+    }
+  }
+
+  p{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 70px;
+
+    @include mobile{
+      font-size: 14px;
+      color: #ffffff;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__wrap{
+    display: flex;
+    flex-direction: row;
+
+    @include tablet{
+      flex-direction: column;
+    }
+
+    @include mobile{
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__btn{
+    order: 1;
+
+    @include tablet{
+      width: 100%;
+      padding: 14px 0;
+      text-align: center;
+      display: block;
+    }
+
+    @include mobile{
+      width: 100%;
+      padding: 14px 0;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  @include mobile{
+    background: url("../images/hero-cat-mobile.jpg") no-repeat;
+    background-position-x: center;
+  }
+}

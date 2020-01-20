@@ -1,0 +1,197 @@
+{% extends 'layout/base.twig' %}
+{% block title %}catalog{% endblock %}
+{% block header %}
+    {% include 'layout/header.twig' with
+        {
+            'mod' : 'header--catalog',
+            'list' :  [
+            {
+                'link' : 'index.html',
+                'caption' : 'главная',
+            },
+            {
+                'active' : true,
+                'link' : 'catalog.html',
+                'caption' : 'каталог продукции',
+            },
+            {
+                'link' : 'feedback.html',
+                'caption' : 'подбор программы',
+            },
+        ]
+        } %}
+{% endblock %}
+{% block body %}
+    {% include 'components/title.twig' with {
+        'section_title' : 'Каталог продукции',
+    } %}
+
+    {% include 'components/product.twig' with {
+        'list' : [
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-1-tablet.png',
+                'mobile_src' : '../images/product-1-mobile.png',
+                'src' : '../images/product-1.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 500г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '500 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-2-tablet.png',
+                'mobile_src' : '../images/product-2-mobile.png',
+                'src' : '../images/product-2.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 500г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '500 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-3-tablet.png',
+                'mobile_src' : '../images/product-3-mobile.png',
+                'src' : '../images/product-3.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 500г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '500 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-4-tablet.png',
+                'mobile_src' : '../images/product-4-mobile.png',
+                'src' : '../images/product-4.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 500г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '500 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-5-tablet.png',
+                'mobile_src' : '../images/product-5-mobile.png',
+                'src' : '../images/product-5.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 500г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '500 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-6-tablet.png',
+                'mobile_src' : '../images/product-6-mobile.png',
+                'src' : '../images/product-6.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 500г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '1000 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'title' : 'cat energy',
+                'tablet_src' : '../images/product-7-tablet.png',
+                'mobile_src' : '../images/product-7-mobile.png',
+                'src' : '../images/product-7.png',
+                'responsive' : true,
+                'main_title' : 'cat energy pro 5000г',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'title_volume' : 'Объём',
+                'volume' : '500 г',
+                'title_taste' : 'Вкус',
+                'taste' : 'Курица',
+                'title_price' : 'Цена',
+                'price' : '700 Р.',
+            },
+            {
+                'class_mobile' : 'product__img-plus',
+                'last_title' : 'product__last-title',
+                'tablet_src' : '../images/plus-tablet.png',
+                'mobile_src' : '../images/plus-mobile.png',
+                'src' : '../images/plus.png',
+                'responsive' : true,
+                'main_title' : 'показать еще 100500 товаров',
+                'description' : 'На самом деле вкусов гораздо больше!',
+                'description_class' : 'product__description',
+                'btn_grey' : 'btn--grey',
+                'catalog_btn' : 'product__btn',
+                'link' : '#',
+                'class_all' : 'product__item-all',
+            },
+
+        ]
+    } %}
+
+    {% include 'components/title-green-line.twig' with {
+        'title' : 'Дополнтиельные товары',
+    } %}
+    {% include 'components/extra.twig' with {
+        'list' : [
+            {
+                'title' : 'сахарозаменитель',
+                'description' : '1 упаковка (100 г)',
+                'value' : '200 Р.',
+                'btn' : 'extra__btn',
+                'link' : '#',
+            },
+            {
+                'title' : 'питьевая вода',
+                'description' : '5 литров',
+                'value' : '50 Р.',
+                'btn' : 'extra__btn',
+                'link' : '#',
+            },
+            {
+                'title' : 'молоко',
+                'description' : '1 литро',
+                'value' : '100 Р.',
+                'btn' : 'extra__btn',
+                'link' : '#',
+            },
+            {
+                'title' : 'витамины',
+                'description' : '1 упаковка (30 г)',
+                'value' : '300 Р.',
+                'btn' : 'extra__btn',
+                'link' : '#',
+            },
+        ]
+    } %}
+{% endblock %}

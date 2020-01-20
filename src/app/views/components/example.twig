@@ -1,0 +1,27 @@
+<section class="example">
+    <div class="container">
+        <div class="example__wrap">
+            <div class="example__description">
+                <h5>{{ title }}</h5>
+                <p class="example__description-item">{{ description }}</p>
+                <ul class="example__list">
+                    <li class="example__item">
+                        <p class="example__title">{{ weight }}</p>
+                        <p class="example__relation">{{ description_weight }}</p>
+                    </li>
+                    <li class="example__item">
+                        <p class="example__title">{{ days }}</p>
+                        <p class="example__relation">{{ description_days }}</p>
+                    </li>
+                </ul>
+                <p class="example__expenses">{{ expenses }}<span
+                            class="example__price">{{ price }}</span>
+                </p>
+            </div>
+            {% include 'beforeafterimg.twig' with {
+                'src_image1' : '/images/strong-cat.png',
+                'src_image2' : '/images/fat-cat.png',
+            } %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,68 @@
+{% extends 'layout/base.twig' %}
+{% block title %}CATenergy{% endblock %}
+{% block body %}
+
+    {% include 'components/hero.twig' with
+        {
+            'title' : 'Функцилнальное<br>питание для котов',
+            'section_description' : 'занялся собой? займись котом!',
+            'btn' : 'подобрать программу'
+        } %}
+
+    {% include 'components/cards.twig' with
+        {
+            'list' :  [
+            {
+                'img' : 'cat',
+                'caption' : 'похудение',
+                'description' : 'Ваш кот весит больше собаки и почти утратил способность<br>лазить по деревьям? Пора на диету! Cat Energy Slim поможет<br>вашему питомцу сбросить лишний вес.',
+                'link' : 'каталог slim'
+            },
+            {
+                'img' : 'pantera',
+                'caption' : 'набор массы',
+                'description' : 'Заработать авторитет среди дворовых котов и даже собак?<br>Серия Cat Energy Pro поможет вашему коту нарастить<br>необходимые мышцы!',
+                'link' : 'каталог slim'
+            }
+        ]
+        } %}
+
+    {% include 'components/advantages.twig' with
+        {
+            'title' : 'Как это работает',
+            'list' : [
+            {
+                'img' : 'konoha',
+                'description' : 'Функциональное питание содержит только полезные питательные вещества.',
+                'number' : '1',
+            },
+            {
+                'img' : 'water',
+                'description' : 'Выпускается в виде порошка, который нужно лишь залить кипятком и готово.',
+                'number' : '2',
+            },
+            {
+                'img' : 'fork',
+                'description' : 'Замените один-два приема обычной еды на наше фунцкциональное питание.',
+                'number' : '3',
+            },
+            {
+                'img' : 'alarm',
+                'description' : 'Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!',
+                'number' : '4',
+            },
+        ]
+        } %}
+
+    {% include 'components/example.twig' with {
+        'title' : 'Живой пример',
+        'description' : 'Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.',
+        'weight' : '5 кг',
+        'description_weight' : 'снижение веса',
+        'days' : '60 дней',
+        'description_days' : 'затрачено времени',
+        'expenses' : 'затраты на питание:',
+        'price' : '15 000 руб.',
+    } %}
+
+{% endblock %}

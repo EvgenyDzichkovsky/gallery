@@ -1,0 +1,9 @@
+
+.submit__btn{
+  width: 570px;
+
+  @include mobile{
+    width: 100%;
+    padding: 14px 0;
+  }
+}

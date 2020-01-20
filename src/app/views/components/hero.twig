@@ -1,0 +1,19 @@
+<section class="hero">
+    <div class="hero__bg-mobile"></div>
+    <div class="hero__wrap container">
+        <div class="hero__wrap-content">
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+            <a href="#" class="btn hide">{{ btn }}</a>
+        </div>
+            <a href="#" class="hero__btn btn show-mobile">{{ btn }}</a>
+        {% include 'img.twig' with {
+            'class' : 'hero__focus-image',
+            'title' : 'cat energy',
+            'tablet_src' : '/images/cat-energy-tablet.jpg',
+            'mobile_src' : '/images/cat-energy-mobile.png',
+            'src' : '/images/cat-energy.png',
+            'responsive' : 'true'
+        } %}
+    </div>
+</section>

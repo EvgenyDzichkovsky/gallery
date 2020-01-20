@@ -1,0 +1,77 @@
+.title-green-line {
+  position: relative;
+
+    &--name{
+      width: 512px !important;
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      @include mobile{
+        width: 210px!important;
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+    }
+
+    &--comment {
+      width: 185px !important;
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      @include mobile{
+        width: 145px!important;
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+    }
+
+    &--additionally{
+      width: 210px !important;
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      @include mobile{
+        width: 170px!important;
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+    }
+
+  @include mobile {
+    margin-bottom: 45px;
+    margin-top: 45px;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    background: #68b738;
+    width: 100%;
+    top: 54%;
+
+    @include mobile {
+      width: 50%;
+      left: 50%;
+    }
+  }
+
+  h6 {
+    font-size: 36px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    width: 338px;
+    padding: 0 40px;
+
+    @include mobile {
+      font-size: 24px;
+      padding: 0;
+      width: 250px;
+    }
+  }
+
+  @include mobile{
+    margin: 0;
+  }
+}

@@ -1,0 +1,138 @@
+.extra {
+
+
+  &__wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 115px;
+
+    @include tablet{
+      flex-direction: column;
+      width: auto;
+    }
+
+    @include mobile{
+      flex-direction: column;
+      width: auto;
+    }
+  }
+
+
+  &__list {
+    width: 895px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet{
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    @include mobile{
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item{
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -1px;
+    height: 70px;
+
+    @include tablet{
+      height: auto;
+      flex-direction: column;
+      border: 1px solid #d9d9d9;
+      padding: 30px;
+    }
+
+    @include mobile{
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+    }
+  }
+
+  &__title{
+    width: 245px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    @include mobile{
+      margin-bottom: 17px;
+      width: 100%;
+    }
+  }
+
+  &__description{
+    width: 285px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include tablet{
+      width: auto;
+    }
+
+    @include mobile{
+      margin-bottom: 17px;
+      width: 100%;
+    }
+  }
+
+  &__wrap-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 610px;
+    align-items: center;
+
+    @include tablet{
+      padding-bottom: 25px;
+    }
+
+    span{
+      margin-left: 50px;
+
+      @include mobile{
+        margin-left: 0;
+      }
+    }
+
+    @include mobile{
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+    }
+  }
+
+  &__order {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: center;
+  }
+
+  &__btn{
+    width: 245px;
+    padding: 13px 0;
+    font-size: 16px;
+
+    @include tablet{
+      width: 100%;
+    }
+
+    @include mobile{
+      width: 100%;
+    }
+  }
+}

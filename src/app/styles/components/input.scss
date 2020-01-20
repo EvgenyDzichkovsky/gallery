@@ -1,0 +1,70 @@
+.input {
+  flex: 1;
+  height: 50px;
+  padding-left: 20px;
+  font-family: "OswaldRegular", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 1px solid #d9d9d9;
+
+  &:focus {
+    border: 1px solid black;
+    outline: none;
+  }
+}
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: "OswaldRegular", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  span {
+    padding-right: 30px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0s;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  &--email {
+    width: 570px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &--png-email:before, &--png-tel:before {
+    position: absolute;
+    content: "";
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--png-email:before {
+    @include png-sprite($icon-email);
+  }
+
+  &--png-tel:before {
+    @include png-sprite($icon-tel);
+  }
+}

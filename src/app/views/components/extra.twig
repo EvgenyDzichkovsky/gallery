@@ -1,0 +1,27 @@
+<section class="extra">
+    <div class="container">
+        <div class="extra__wrap">
+            <ul class="extra__list">
+                {% for item in list %}
+                    <li class="extra__item">
+                        <div class="extra__wrap-title">
+                            <p class="extra__title">{{ item.title }}</p>
+                            <p class="extra__description">{{ item.description }}<span>{{ item.value }}</span></p>
+                        </div>
+                        <a class="btn {{ item.btn }}" href="{{ item.link }}">заказать</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="extra__order">
+                {% include 'img.twig' with {
+                    'class' : '',
+                    'title' : 'cat in machine',
+                    'tablet_src' : '/images/cat-in-machine-tablet.jpg',
+                    'mobile_src' : '/images/cat-in-machine-mobile.jpg',
+                    'src' : '/images/cat-in-machine.jpg',
+                    'responsive' : 'true'
+                } %}
+            </div>
+        </div>
+    </div>
+</section>

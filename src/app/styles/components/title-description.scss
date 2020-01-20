@@ -1,0 +1,21 @@
+.title-description{
+  p{
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 325px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    @include mobile{
+      font-size: 14px;
+      width: auto;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include tablet{
+    align-self: start;
+    margin-left: 70px;
+  }
+}

@@ -1,0 +1,133 @@
+<section class="form">
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form__wrap">
+                {% include '../components/title-description.twig' with {
+                    'item_description' : 'Заполните анкету и мы подберем программу питания для вашего кота',
+                } %}
+                <div class="form__wrap-input">
+                    <div class="form__object">
+                        {% include 'input.twig' with {
+                            'title' : 'Имя:*',
+                            'type' : 'text',
+                            'placeholder' : 'Барсик',
+                            'name' : 'name',
+                            'required' : '#',
+                        } %}
+                        {% include 'input.twig' with {
+                            'title' : 'Вес (кг):*',
+                            'type' : 'text',
+                            'placeholder' : '7',
+                            'name' : 'weight',
+                            'required' : '#',
+                        } %}
+                        {% include 'input.twig' with {
+                            'title' : 'Возраст (лет):*',
+                            'type' : 'text',
+                            'placeholder' : '7',
+                            'name' : 'age',
+                            'required' : '#',
+                        } %}
+                    </div>
+                    <div class="form__program-selection">
+                        {% include 'radio.twig' with {
+                            'title' : 'похудение',
+                            'class' : 'radio',
+                            'type' : 'radio',
+                            'name' : 'radio',
+                            'checked' : 'checked',
+                            'required' : '#',
+                        } %}
+                        {% include 'radio.twig' with {
+                            'title' : 'набор массы',
+                            'class' : 'radio',
+                            'type' : 'radio',
+                            'name' : 'radio',
+                            'required' : '#',
+                        } %}
+                        {% include 'radio.twig' with {
+                            'title' : 'Не знаю (нужен ваш совет)',
+                            'class' : 'radio',
+                            'type' : 'radio',
+                            'name' : 'radio',
+                            'required' : '#',
+                        } %}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% include 'title-green-line.twig' with {
+        'title' : 'Контактные данные (владельца кота)',
+        'class' : 'name',
+    } %}
+    <div class="container">
+            <div class="form__email">
+                {% include '../components/input.twig' with {
+                    'modifier' : 'label--email',
+                    'png' : 'email',
+                    'title' : 'e-mail',
+                    'type' : 'email',
+                    'name' : 'e-mail',
+                    'placeholder' : 'kuklachev@gmail.com',
+                    'required' : '#',
+                } %}
+                {% include '../components/input.twig' with {
+                    'modifier' : 'label--email',
+                    'png' : 'tel',
+                    'title' : 'телефон',
+                    'type' : 'tel',
+                    'name' : 'number',
+                    'placeholder' : '8 (960) 900-60-90',
+                    'required' : '#',
+                } %}
+            </div>
+    </div>
+    {% include 'title-green-line.twig' with {
+        'title' : 'Комментарий',
+        'class' : 'comment',
+    } %}
+    <div class="container">
+            {% include 'textarea.twig' with {
+                'description' : 'Расскажите обо всех повадках кота',
+            } %}
+    </div>
+    {% include 'title-green-line.twig' with {
+        'title' : 'Дополнительно',
+        'class' : 'additionally',
+    } %}
+
+    <div class="container">
+            <div class="form__checkbox">
+                {% include '../components/cheсkbox.twig' with {
+                    'title' : 'сахарозаменитель',
+                    'class_label' : 'label__checkbox',
+                    'name' : 'checkbox',
+                    'checked' : 'checked',
+                } %}
+                {% include '../components/cheсkbox.twig' with {
+                    'title' : 'питьевая вода',
+                    'class_label' : 'label__checkbox',
+                    'name' : 'checkbox',
+                } %}
+                {% include '../components/cheсkbox.twig' with {
+                    'title' : 'молоко',
+                    'class_label' : 'label__checkbox',
+                    'name' : 'checkbox',
+                } %}
+                {% include '../components/cheсkbox.twig' with {
+                    'title' : 'витамины',
+                    'class_label' : 'label__checkbox',
+                    'name' : 'checkbox',
+                } %}
+            </div>
+        <div class="form__wrap-submit">
+            {% include '../components/submit.twig' with {
+                'title' : 'отправить заявку',
+            } %}
+            {% include '../components/important.twig' with {
+                'title' : '* - Обязательные поля',
+            } %}
+        </div>
+    </div>
+</section>

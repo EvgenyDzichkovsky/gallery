@@ -1,0 +1,203 @@
+.product {
+  margin-top: 155px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+
+  &__last-title {
+
+    @include mobile {
+      text-align: center !important;
+      font-size: 16px !important;
+      margin-bottom: 20px !important;
+      width: auto !important;
+      align-self: center !important;
+      padding-top: 60px !important;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h5 {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+
+      @include mobile {
+        align-self: flex-end;
+        width: 140px;
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-family: 'Arial', sans-serif;
+      font-size: 19px;
+      font-weight: 500;
+      text-align: center;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    background: #f2f2f2;
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 140px;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    @include tablet {
+      width: 244px;
+      padding: 0 40px 40px 40px;
+    }
+
+    @include mobile {
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      flex-direction: column;
+      margin-bottom: -1px;
+    }
+
+    &-all {
+      background: #ffffff;
+      border: 1px solid #d9d9d9;
+      justify-content: space-between;
+
+      table {
+        display: none;
+      }
+
+      @include mobile {
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 335px;
+
+    @include mobile {
+      bottom: 38%;
+      left: 0;
+    }
+
+    &-plus{
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__btn {
+    padding: 13px 0;
+    width: 100%;
+  }
+
+  &__table {
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    margin-bottom: 33px;
+    width: 100%;
+    border-collapse: collapse;
+
+    &-row {
+      border-bottom: 1px solid #cdcdcd;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include mobile {
+        border: none;
+        width: 140px;
+        font-size: 12px;
+      }
+    }
+
+    &-column {
+      padding: 10px 0;
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__wrap-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 167px;
+    padding-top: 150px;
+
+    &--all {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+      height: 270px;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding-top: 25px;
+    }
+  }
+
+  &__description {
+    font-size: 16px !important;
+    padding-top: 0;
+    margin-top: 30px;
+    margin-bottom: 68px;
+
+    @include mobile {
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__plus {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-plus);
+      content: '';
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__last-title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
