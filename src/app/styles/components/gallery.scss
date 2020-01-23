@@ -1,6 +1,6 @@
 .gallery {
 
-  a{
+  a {
     display: block;
   }
 
@@ -18,19 +18,18 @@
     margin-right: 5px;
     margin-bottom: 5px;
 
-    img{
+    img {
       width: 100%;
       height: auto;
     }
   }
 
-  span{
+  span {
     color: white;
-    font-size: 16px;
     cursor: pointer;
   }
 
-  &__lightbox{
+  &__lightbox {
     display: none;
     position: fixed;
     top: 0;
@@ -42,37 +41,129 @@
     overflow-y: auto;
   }
 
-  &__overlay{
+  &__overlay {
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
   }
 
-  figure{
+  figure {
     width: 1000px;
     margin: 0 auto;
     margin-top: 100px;
     position: relative;
 
-    img{
+    img {
       width: 100%;
     }
   }
 
-  &__prev, &__next{
+  &__stop{
+    outline: none;
+    cursor: pointer;
+    font-size: 0;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include iconic(stop);
+    transition: 0.3s;
+    background: rgba(0, 0, 0, .3);
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:before {
+      position: absolute;
+      font-size: 16px;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__auto {
+    outline: none;
+    cursor: pointer;
+    font-size: 0;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include iconic(play);
+    transition: 0.3s;
+    background: rgba(0, 0, 0, .3);
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+      background: rgba(0, 0, 0, .8);
+    }
+
+    &:active {
+      background: rgba(0, 0, 0, .6);
+      transition: 0s;
+    }
+
+    &:before {
+      position: absolute;
+      font-size: 16px;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+    }
+  }
+
+  &__prev, &__next {
+    font-size: 0;
     position: absolute;
     top: 50%;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      background: rgba(0, 0, 0, .8);
+    }
+
+    &:active {
+      background: rgba(0, 0, 0, .6);
+      transition: 0s;
+    }
   }
 
   &__next {
-    right: -30px;
+    right: -60px;
+    @include iconic(next);
+
+    &:before {
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 54%;
+      transform: translate(-50%, -50%);
+    }
   }
 
-  &__prev{
-    left: -30px;
+  &__prev {
+    left: -60px;
+    @include iconic(next);
+
+    &:before {
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 48%;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
   }
 }

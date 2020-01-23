@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "Iconic";
+	src: url('../fonts/iconic/Iconic.eot');
+	src: url('../fonts/iconic/Iconic.eot?#iefix') format('eot'),
+		url('../fonts/iconic/Iconic.woff2') format('woff2'),
+		url('../fonts/iconic/Iconic.woff') format('woff'),
+		url('../fonts/iconic/Iconic.ttf') format('truetype'),
+		url('../fonts/iconic/Iconic.svg#Iconic') format('svg');
+}
+
+@mixin iconic-styles {
+	font-family: "Iconic";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%iconic {
+	@include iconic-styles;
+}
+
+@function iconic-char($filename) {
+	$char: "";
+
+	@if $filename == next {
+		$char: "\E001";
+	}
+	@if $filename == play {
+		$char: "\E002";
+	}
+	@if $filename == stop {
+		$char: "\E003";
+	}
+
+	@return $char;
+}
+
+@mixin iconic($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %iconic;
+		} @else {
+			@include iconic-styles;
+		}
+		content: iconic-char($filename);
+	}
+}
+
+.iconic-next {
+	@include iconic(next);
+}
+.iconic-play {
+	@include iconic(play);
+}
+.iconic-stop {
+	@include iconic(stop);
+}

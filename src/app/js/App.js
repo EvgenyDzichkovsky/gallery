@@ -23,6 +23,20 @@ var imgSources = [
     './images/img-10-lg.jpg',
 ];
 
+var navMain = document.querySelector('.gallery__auto');
+var navToggle = document.querySelector('.js-menu-toggle');
+navMain.classList.remove('nav--nojs');
+
+navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('gallery__auto')) {
+        navMain.classList.remove('gallery__auto');
+        navMain.classList.add('gallery__stop');
+    } else {
+        navMain.classList.add('gallery__auto');
+        navMain.classList.remove('gallery__stop');
+    }
+});
+
 for (var i = 0; i < imgSources.length; i++) {
     imgs[i] = new Image();
     imgs[i].src = imgSources[i];
@@ -44,13 +58,30 @@ $links.click(function (evt) {
     $lightbox.fadeIn();
 });
 
+$auto.click(function () {
+    if (time == null) {
+        time = setInterval(function () {
+            $next.click();
+        }, 1000);
+    } else {
+        clearInterval(time);
+        time = null;
+    }
+});
+
 $overlay.click(function () {
     $lightbox.fadeOut();
+    clearInterval(time);
+    time = null;
+    navMain.classList.add('gallery__auto');
 });
 
 $(document).keydown(function (evt) {
     if (evt.keyCode === 27) {
         $lightbox.fadeOut();
+        clearInterval(time);
+        time = null;
+        navMain.classList.add('gallery__auto');
     }
 });
 
@@ -79,24 +110,4 @@ $prev.click(function () {
 });
 
 
-// $startPlay.click(function () {
-//     time = setInterval(function () {
-//         $next.click();
-//     }, 1000);
-// });
-//
-// $stopPlay.click(function () {
-//     clearInterval(time);
-// });
-
-$auto.click(function () {
-    if (time == null) {
-        time = setInterval(function () {
-            $next.click();
-        }, 3000);
-    } else {
-        clearInterval(time);
-        time = null;
-    }
-});
 
