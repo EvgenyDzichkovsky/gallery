@@ -1,0 +1,23 @@
+<section class="gallery">
+    <div class="container">
+        <ul class="gallery__list">
+            {% for item in list %}
+                <li class="gallery__items">
+                    <a href="{{ item.url_full }}">
+                        <img src="{{ item.url_preview }}" alt="{{ item.alt }}">
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="gallery__lightbox">
+            <div class="gallery__overlay"></div>
+            <figure>
+                <span class="gallery__prev">prev</span>
+                <span class="gallery__next">next</span>
+                <span class="gallery__auto">auto</span>
+                <img src="">
+            </figure>
+        </div>
+    </div>
+</section>

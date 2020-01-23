@@ -10,58 +10,61 @@
 </head>
 <body>
 <div class="wrapper">
-    {% block header %}
-        {% include 'header.twig' with
-            {
-                'list' :  [
-                {
-                    'active' : true,
-                    'link' : 'index.html',
-                    'caption' : 'главная',
-                },
-                {
-                    'link' : 'catalog.html',
-                    'caption' : 'каталог продукции',
-                },
-                {
-                    'link' : 'feedback.html',
-                    'caption' : 'подбор программы',
-                },
-            ]
-            } %}
-    {% endblock %}
-    {% block body %}
-
-    {% endblock %}
-    {% include '../components/contacts.twig' with
-        {
-            'title' : 'приглашаем к сотрудничеству дилеров!',
-            'description' : 'ул. Большая Конюшенная, д. 19/8 Санкт-Петербург',
-            'url_map' : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4165.0389332516215!2d27.558408089741537!3d53.898059125202046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfc1f0c10db3%3A0x3c62938f02eb9022!2z0JPQo9Cc!5e0!3m2!1sru!2sby!4v1576606171200!5m2!1sru!2sby',
-
-        } %}
-    {% include 'footer.twig' with
+    {% include '../components/gallery.twig' with
         {
             'list' : [
             {
-                'class' : 'vk',
-                'link' : '#',
-                'title' : 'вконтакте',
+                'url_full' : '../images/img-1-lg.jpg',
+                'url_preview' : '../images/img-1-sm.jpg',
+                'alt' : 'Функциональное',
             },
             {
-                'class' : 'inst',
-                'link' : '#',
-                'title' : 'инстаграм',
+                'url_full' : '../images/img-2-lg.jpg',
+                'url_preview' : '../images/img-2-sm.jpg',
+                'alt' : 'Функциональное',
             },
             {
-                'class' : 'fb',
-                'link' : '#',
-                'title' : 'фейсбук',
+                'url_full' : '../images/img-3-lg.jpg',
+                'url_preview' : '../images/img-3-sm.jpg',
+                'alt' : 'Функциональное',
             },
-        ],
-            'title_dev' : 'HTML Academy',
+            {
+                'url_full' : '../images/img-4-lg.jpg',
+                'url_preview' : '../images/img-4-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+            {
+                'url_full' : '../images/img-5-lg.jpg',
+                'url_preview' : '../images/img-5-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+            {
+                'url_full' : '../images/img-6-lg.jpg',
+                'url_preview' : '../images/img-6-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+            {
+                'url_full' : '../images/img-7-lg.jpg',
+                'url_preview' : '../images/img-7-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+            {
+                'url_full' : '../images/img-8-lg.jpg',
+                'url_preview' : '../images/img-8-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+            {
+                'url_full' : '../images/img-9-lg.jpg',
+                'url_preview' : '../images/img-9-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+            {
+                'url_full' : '../images/img-10-lg.jpg',
+                'url_preview' : '../images/img-10-sm.jpg',
+                'alt' : 'Функциональное',
+            },
+        ]
         } %}
-
     {% block scripts %}
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="/js/libraries.js"></script>
