@@ -18,13 +18,29 @@
       background: #292524;
       position: absolute;
     }
+
+    &:hover {
+      text-decoration: none;
+      animation: rainbow 3s infinite;
+    }
+
+    @keyframes rainbow {
+            0% { color: red; }
+            16.6% { color: orange; }
+            33.2% { color: yellow; }
+            49.8% { color: green; }
+            66.4% { color: blue; }
+            83% { color: darkblue; }
+            100% { color: purple; }
   }
 
-  a {
+  }
+
+  &__links {
     position: relative;
     display: block;
     transition: 0.5s;
-    
+
     &:hover {
       transition: 0.5s;
       transform: scale(1.16);
