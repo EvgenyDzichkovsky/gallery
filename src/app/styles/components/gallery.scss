@@ -10,7 +10,7 @@
     position: relative;
     opacity: 0.9;
 
-    &:after{
+    &:after {
       display: block;
       content: '';
       width: 100%;
@@ -21,12 +21,28 @@
   }
 
   a {
+    position: relative;
     display: block;
     transition: 0.5s;
 
+    &:after {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      left: 0;
+      transition: 0.5s;
+    }
+   &:hover:after{
+     background: rgba(0, 0, 0, 0.0);
+     transition: 0.5s;
+   }
     &:hover {
       transition: 0.5s;
       transform: scale(1.16);
+
     }
   }
 
@@ -87,6 +103,14 @@
     img {
       width: 100%;
     }
+
+    @include tablet {
+      width: 750px;
+    }
+
+    @include mobile {
+      width: 300px;
+    }
   }
 
   &__stop {
@@ -111,6 +135,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    @include tablet {
+      width: 75px;
+      height: 45px;
+      bottom: -80px;
+    }
+
+    @include mobile {
+      bottom: -80px;
+      width: 75px;
+      height: 45px;
     }
   }
 
@@ -149,6 +185,18 @@
       left: 50%;
       transform: translate(-40%, -50%);
     }
+
+    @include tablet {
+      width: 75px;
+      height: 45px;
+      bottom: -80px;
+    }
+
+    @include mobile {
+      bottom: -80px;
+      width: 75px;
+      height: 45px;
+    }
   }
 
   &__prev, &__next {
@@ -172,6 +220,14 @@
       background: rgba(0, 0, 0, .6);
       transition: 0s;
     }
+
+    @include tablet {
+      top: 435px;
+    }
+
+    @include mobile {
+      top: 180px;
+    }
   }
 
   &__next {
@@ -185,6 +241,14 @@
       left: 54%;
       transform: translate(-50%, -50%);
     }
+
+    @include tablet {
+      right: 0;
+    }
+
+    @include mobile {
+      right: 0;
+    }
   }
 
   &__prev {
@@ -197,6 +261,14 @@
       top: 50%;
       left: 48%;
       transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    @include tablet {
+      left: 0;
+    }
+
+    @include mobile {
+      left: 0;
     }
   }
 }
