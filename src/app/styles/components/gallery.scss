@@ -97,7 +97,7 @@
   }
 
   figure {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 100px;
     position: relative;
@@ -111,7 +111,7 @@
     }
 
     @include mobile {
-      width: 300px;
+      max-width: 600px;
     }
   }
 
@@ -228,7 +228,7 @@
     }
 
     @include mobile {
-      top: 180px;
+      top: 100%;
     }
   }
 
@@ -249,7 +249,7 @@
     }
 
     @include mobile {
-      right: 0;
+      right: 10px;
     }
   }
 
@@ -270,7 +270,7 @@
     }
 
     @include mobile {
-      left: 0;
+      left: 10px;
     }
   }
 }

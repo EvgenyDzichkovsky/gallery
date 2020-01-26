@@ -21,21 +21,23 @@ var imgSources = [
     './images/img-8-lg.jpg',
     './images/img-9-lg.jpg',
     './images/img-10-lg.jpg',
+    './images/img-11-lg.jpg',
+    './images/img-12-lg.jpg',
 ];
 
-var navMain = document.querySelector('.gallery__auto');
-var navToggle = document.querySelector('.js-menu-toggle');
-navMain.classList.remove('nav--nojs');
-
-navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('gallery__auto')) {
-        navMain.classList.remove('gallery__auto');
-        navMain.classList.add('gallery__stop');
-    } else {
-        navMain.classList.add('gallery__auto');
-        navMain.classList.remove('gallery__stop');
-    }
-});
+// var navMain = document.querySelector('.gallery__auto');
+// var navToggle = document.querySelector('.js-menu-toggle');
+// navMain.classList.remove('nav--nojs');
+//
+// navToggle.addEventListener('click', function () {
+//     if (navMain.classList.contains('gallery__auto')) {
+//         navMain.classList.remove('gallery__auto');
+//         navMain.classList.add('gallery__stop');
+//     } else {
+//         navMain.classList.add('gallery__auto');
+//         navMain.classList.remove('gallery__stop');
+//     }
+// });
 
 for (var i = 0; i < imgSources.length; i++) {
     imgs[i] = new Image();
@@ -63,9 +65,13 @@ $auto.click(function () {
         time = setInterval(function () {
             $next.click();
         }, 1000);
+        $auto.addClass('gallery__stop');
+        $auto.removeClass('gallery__auto');
     } else {
         clearInterval(time);
         time = null;
+        $auto.removeClass('gallery__stop');
+        $auto.addClass('gallery__auto');
     }
 });
 
@@ -73,7 +79,7 @@ $overlay.click(function () {
     $lightbox.fadeOut();
     clearInterval(time);
     time = null;
-    navMain.classList.add('gallery__auto');
+    $auto.addClass('gallery__auto');
 });
 
 $(document).keydown(function (evt) {
@@ -81,7 +87,7 @@ $(document).keydown(function (evt) {
         $lightbox.fadeOut();
         clearInterval(time);
         time = null;
-        navMain.classList.add('gallery__auto');
+        $auto.addClass('gallery__auto');
     }
 });
 
