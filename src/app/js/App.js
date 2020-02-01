@@ -1,5 +1,5 @@
 (function($) {
-    var $li = $('[data-list]').find('> li'),
+    var $li = $('[data-gallery]').find('> li'),
         $links = $li.find('> a'),
         $lightbox = $('[data-lightbox]'),
         $overlay = $('[data-overlay]'),
