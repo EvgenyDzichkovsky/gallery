@@ -1,11 +1,11 @@
 (function($) {
     var $li = $('[data-gallery]').find('> li'),
         $links = $li.find('> a'),
-        $lightbox = $('[data-lightbox]'),
-        $overlay = $('[data-overlay]'),
-        $prev = $('[data-prev]'),
-        $next = $('[data-next]'),
-        $auto = $('[data-auto]'),
+        $lightbox = $('[data-gallery-lightbox]'),
+        $overlay = $('[data-gallery-overlay]'),
+        $prev = $('[data-gallery-prev]'),
+        $next = $('[data-gallery-next]'),
+        $auto = $('[data-gallery-auto]'),
         liIndex,
         targetImg;
 
